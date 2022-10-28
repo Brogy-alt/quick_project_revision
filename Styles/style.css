@@ -1,0 +1,38 @@
+/* universal styling */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* layout */
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr 100px;
+}
+
+header, main, footer{
+    grid-column: 1 / -1;
+}
+
+.container{
+    background-color: khaki;
+    margin: auto;
+}
+
+/* .container img{
+    width: 100%;
+} */
+
+header, footer {
+    background-color: blueviolet;
+}
+
+@media screen and (max-width: 720px) {
+    .container img {
+        width: 100%
+    }
+}
